@@ -73,7 +73,6 @@ The playbook implements the following tasks:
 - The header of the Playbook can specify a different group of machines as well as a different remote user.
 - The playbook should install the following services docker.io, python3-pip, and docker (Docker Python pip module)
 - Launching and exposing the container run sebp/elk:761 the container should be started with these published ports.
-
 5601:5601
 9200:9200
 5044:5044
