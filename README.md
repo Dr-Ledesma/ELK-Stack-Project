@@ -109,3 +109,19 @@ SSH into the control node and follow the steps below:
 - How do I specify which machine to install the ELK server on versus which to install Filebeat on? Within the [elk.yml](https://github.com/Dr-Ledesma/ELK-Stack-Project/blob/master/elk.yml) file.
 - Which URL do you navigate to in order to check that the ELK server is running? 
 `http://[your.VM.IP]:5601/app/kibana`
+
+### The commands needed to run the Ansible configuration for the Elk-Server are:
+
+- SSH into jumpBox Vm `ssh RedAdmin@[Public IP address]`
+- Run `sudo docker container list -a`
+- Run `sudo docker start container [Container name]`
+- Run `sudo docker attach container [Container name]`
+- Update the hosts file in `/etc/ansible/[Hosts](https://github.com/Dr-Ledesma/ELK-Stack-Project/blob/master/Hosts)`
+- Then create new Ansible playbook to use for your new Elk Vm `curl [elk.yml](https://github.com/Dr-Ledesma/ELK-Stack-Project/blob/master/elk.yml) > /etc/ansible/elk.yml`
+- Run `ansible-playbook elk.yml`
+- After the Elk container is installed double check elk-docker container is running by SSH into Elk VM `ssh RedAdmin@[private IP address]`
+- Run `sudo docker ps`
+- Since the Elk server runs on port `5601` you need to create an incoming rule for the security group that allows TCP traffic over the port `5601` from your IP address.
+- Check that you can load the ELK stack server at `http://[your.VM.IP]:5601/app/kibana`.
+- If everthing works correcty, you should see the home webpage of kibana.
+
