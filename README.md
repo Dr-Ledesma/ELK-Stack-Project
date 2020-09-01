@@ -73,6 +73,7 @@ The playbook implements the following tasks:
 - The header of the Playbook can specify a different group of machines as well as a different remote user.
 - The playbook should install the following services docker.io, python3-pip, and docker (Docker Python pip module)
 - Launching and exposing the container run sebp/elk:761 the container should be started with these published ports.
+
 5601:5601
 9200:9200
 5044:5044
@@ -83,7 +84,7 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- WEB1 10.0.0.12, WEB2 10.0.0.13, WEB3 10.0.0.14
+`WEB1 10.0.0.12, WEB2 10.0.0.13, WEB3 10.0.0.14`
 
 We have installed the following Beats on these machines:
 - Filebeat and Metricbeat.
