@@ -98,7 +98,7 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the [filebeat-config.yml](https://github.com/Dr-Ledesma/ELK-Stack-Project/new/master) and `metricbeat.yml` file to `/etc/ansible/roles`.
+- Copy the [filebeat-config.yml](https://github.com/Dr-Ledesma/ELK-Stack-Project/new/master) and [metricbeat-config.yml](https://github.com/Dr-Ledesma/ELK-Stack-Project/blob/master/metricbeat-config.yml) file to `/etc/ansible/roles`.
 - Update the configuration file to include private IP of the Elkteam server to the ElasticSearch and kibana.
 - Run the playbook, and navigate to Elkteam VM to check that the installation worked as expected.
 
