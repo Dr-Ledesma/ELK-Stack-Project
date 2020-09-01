@@ -103,9 +103,7 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to Elkteam VM to check that the installation worked as expected.
 
 
-- _Which file is the playbook? [filebeat-playbook.yml](https://github.com/Dr-Ledesma/ELK-Stack-Project/blob/master/filebeat-playbook.yml) Where do you copy it? ```terminal
-curl https://github.com/Dr-Ledesma/ELK-Stack-Project/blob/master/filebeat-playbook.yml > /etc/ansible/roles/filebeat-playbook.yml```
-- _Which file do you update to make Ansible run the playbook on a specific machine? You need to update Ansible [Hosts](https://github.com/Dr-Ledesma/ELK-Stack-Project/blob/master/Hosts) within Ansible container `/etc/ansible/hosts` How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running? 
+- Which file is the playbook? [filebeat-playbook.yml](https://github.com/Dr-Ledesma/ELK-Stack-Project/blob/master/filebeat-playbook.yml) Where do you copy it? `curl https://github.com/Dr-Ledesma/ELK-Stack-Project/blob/master/filebeat-playbook.yml > /etc/ansible/roles/filebeat-playbook.yml`
+- Which file do you update to make Ansible run the playbook on a specific machine? You need to update Ansible [Hosts](https://github.com/Dr-Ledesma/ELK-Stack-Project/blob/master/Hosts) within Ansible container `/etc/ansible/hosts` How do I specify which machine to install the ELK server on versus which to install Filebeat on? Within the [elk.yml](https://github.com/Dr-Ledesma/ELK-Stack-Project/blob/master/elk.yml)
+- Which URL do you navigate to in order to check that the ELK server is running? 
 `http://[your.VM.IP]:5601/app/kibana`
-
